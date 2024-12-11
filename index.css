@@ -1,0 +1,130 @@
+.left {
+    grid-area: left;
+    padding: 10px;
+}
+
+.right {
+    grid-area: right;
+    padding: 10px;
+}
+
+.header {
+    background: rgb(209,153,38);
+background: radial-gradient(circle, rgba(209,153,38,0.18531162464985995) 5%, rgba(14,47,94,1) 73%); grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    color:white;
+ 
+   
+}
+
+.header select {
+    font-size: 20px;
+    
+}
+
+
+.hero-header-container {
+    background-image: url('pictures/pexels-markusspiske-2004161.jpg');
+    background-position: center;
+    background-size: cover;
+    grid-template-areas: 'header header header header header'
+    'hero hero hero hero hero';
+    grid-area: hero-header;
+    
+}
+
+.rightPicture {
+    grid-area: rightPicture;
+    padding: 10px;
+}
+
+.leftPicture {
+    grid-area: leftPicture;
+    padding: 10px;
+}
+
+.hero {
+    grid-area: hero;
+    color: white;
+  
+    padding: 100px;
+}
+
+.footer {
+    grid-area: footer;
+    height: 100px;
+    background-color: aqua;
+}
+
+.leftPicture, .rightPicture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+
+
+.grid-container {
+    
+    display: grid;
+    grid-template-areas: 
+    'hero-header hero-header hero-header hero-header hero-header'
+    'leftPicture leftPicture right right right'
+    'left left left rightPicture rightPicture'
+    'footer footer footer footer footer'
+    ;
+    min-width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+@media (max-width:1300px) {
+    .header {
+        flex-direction: column; /* Stack the header elements */
+        text-align: center; /* Center-align header content */
+        padding: 10px;
+        align-items: center;
+    }
+
+    .header select {
+        text-align: center;
+        width: 30%; 
+        margin-top: 10px;
+        font-size: 30px;
+    
+    } 
+
+
+}
+
+@media (max-width: 400px) {
+    .header {
+        flex-direction: column; /* Stack the header elements */
+        text-align: center; /* Center-align header content */
+        padding: 10px;
+        font-size: 30px;
+    }
+
+    .header select {
+        text-align: center;
+        width: 30%; 
+        margin-top: 10px;
+        font-size: 30px;
+    } 
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack items vertically */
+        grid-template-areas: 
+            'hero-header'
+            'leftPicture'
+            'right'
+            'left'
+            'rightPicture'
+            'footer';
+    }
+}
