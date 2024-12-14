@@ -2,28 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gebauer Sebastian website</title>
     <link rel="stylesheet" href="index.css"></link>
+    <script>
+        const translation = {
+            en: {
+                english: "English",
+                german: "German",
+                slovak: "Slovak",
+                welcome: "Welcome to my Page!"
+            },
+            de: {
+                english: "English",
+                german: "Deutsch",
+                slovak: "Slowakisch",
+                welcome: "Willkommen auf meiner Seite!"
+            },
+            sk: {
+                english: "Anglictina",
+                german: "Nemcina",
+                slovak: "Slovencina",
+                welcome: "Vitajte na mojej Stranke!"
+            }
+        };
+
+        function translateLang() {
+            const language = document.getElementById('language').value;
+            const elementsToTranslate = document.querySelectorAll('[data-translate]');
+
+            elementsToTranslate.forEach (element => {
+                const translateKey = element.getAttribute('data-translate');
+                if(translation[language][translateKey]) {
+                    element.textContent = translation[language][translateKey];
+                }
+            });
+        }
+
+        window.onload = function() {
+            document.getElementById('language').value = 'en';
+            translateLang();
+
+            var viewport = document.querySelector("meta[name=viewport]");
+            if(viewport) {
+                viewport.setAttribute("content", "width=device-width, initial.scale=1.0");
+            }
+        };
+    </script>
 </head>
 <body>
     <div class = "grid-container">
         <div class="hero-header-container">
             <div class="header">
                 <h1 style="padding-left: 30px;">Sebastian Gebauer</h1>
-                <div class="languageSection" style="display: flex; align-items: center; padding-right: 20px;">
+                <div class="languageSection" style="display: flex; align-items: center; padding-right: 10px; margin-right: 10px;">
                     <img src="pictures/icons8-language-100.png">
                     
-                    <select id="language" name="language" style=" margin-bottom: 10px; width: 60%; max-width: 200px;" onchange="updateLanguage()">
-                        <option value="en" data-translate-id="english">English</option>
-                        <option value="de" data-translate-id="german">German</option>
-                        <option value="sk" data-translate-id="slovak">Slovak</option>
+                    <select id="language" name="language" style=" margin-bottom: 10px; width: 60%; max-width: 200px;" onchange="translateLang()">
+                        <option value="en" data-translate="english">English</option>
+                        <option value="de" data-translate="german">German</option>
+                        <option value="sk" data-translate="slovak">Slovak</option>
                     </select>
                 </div>
                 
                 
             </div>
-            <div class="hero"><h1>Willkommen auf meiner Seiter</h1>
+            <div class="hero"><h1  data-translate="welcome">Willkommen auf meiner Seiter</h1>
                                 <h2>Hier finden Sie alles über meine Karriere, Lebenslauf und Hobbys</h2>
             </div>
         </div>
