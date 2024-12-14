@@ -81,6 +81,8 @@ background: radial-gradient(circle, rgba(209,153,38,0.18531162464985995) 5%, rgb
 
 body {
     margin: 0;
+    width: 100%;
+    max-width: 100%;
 }
 
 @media (max-width:1300px) {
