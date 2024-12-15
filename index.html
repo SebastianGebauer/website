@@ -5,50 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gebauer Sebastian website</title>
     <link rel="stylesheet" href="index.css"></link>
-    <script>
-        const translation = {
-            en: {
-                english: "English",
-                german: "German",
-                slovak: "Slovak",
-                welcome: "Welcome to my Page!"
-            },
-            de: {
-                english: "English",
-                german: "Deutsch",
-                slovak: "Slowakisch",
-                welcome: "Willkommen auf meiner Seite!"
-            },
-            sk: {
-                english: "Anglictina",
-                german: "Nemcina",
-                slovak: "Slovencina",
-                welcome: "Vitajte na mojej Stranke!"
-            }
-        };
-
-        function translateLang() {
-            const language = document.getElementById('language').value;
-            const elementsToTranslate = document.querySelectorAll('[data-translate]');
-
-            elementsToTranslate.forEach (element => {
-                const translateKey = element.getAttribute('data-translate');
-                if(translation[language][translateKey]) {
-                    element.textContent = translation[language][translateKey];
-                }
-            });
-        }
-
-        window.onload = function() {
-            document.getElementById('language').value = 'en';
-            translateLang();
-
-            var viewport = document.querySelector("meta[name=viewport]");
-            if(viewport) {
-                viewport.setAttribute("content", "width=device-width, initial-scale=1.0");
-            }
-        };
-    </script>
+    <script src="translation.js"></script> 
 </head>
 <body>
     <div class = "grid-container">
@@ -72,10 +29,32 @@
             </div>
         </div>
        
-        <div class="leftPicture"  style="background-color:#aaa;"><img src="pictures/Professional pic.jpg"></div>
-        <div class="right"  style="background-color:#756f6f;">Column</div>
-        <div class="rightPicture"  style="background-color:#aaa;"><img src="pictures/IMG_10122024002614.jpg" style="height: 500px;"></div>
-        <div class="left"  style="background-color:#756f6f;">Column</div>
+        <div class="leftPicture"  style="background-color:#496ccd;"><img style="max-width: 500px;" src="pictures/Professional pic.jpg"></div>
+        <div class="right"  style="background-color:rgba(14,47,94,1); color:white;"><h1>Introduction</h1>
+            <p>Hi! Thank you for visiting my personal Website. This is where i store all my needed Documents and Achievments for the future.</p>
+            <p>I love working on any kind of Software Development Projects that test my knowledge about the IT</p>
+        </div>
+        <div class="rightPicture"  style="background-color:#496ccd;"><img src="pictures/IMG_10122024002614.jpg" style="height: 500px;"></div>
+        <div class="left"  style="background-color:rgba(14,47,94,1); color:white;"><h1>Skills</h1>
+            <p>My abilities and experiences in the work field </p>
+            <ul style="font-size: 20px; ">
+                <li><strong>Programming Languages</strong></li>
+                <ul><li>C++, C#</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                </ul>
+                <li><strong>Databases</strong></li>
+                <ul><li>OracleDB</li>
+                    <li>Postgres</li>
+                    <li>MS-Database</li>
+                </ul>
+                <li><strong>Languages</strong></li>
+                <ul><li>English</li>
+                    <li>German</li>
+                    <li>Slovak</li>
+                </ul>
+            </ul>
+        </div>
         
         <div class="footer">FooterFooterFooterFooterFooterFooter</div>
     </div>
