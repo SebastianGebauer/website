@@ -227,6 +227,12 @@ body, .grid-container {
             'rightPicture'
             'footer'; /* Ensure each element stacks vertically */
     }
+    .jobLogo {
+        width: 100px; /* Adjust size of the logo */
+        height: auto;
+        margin-right: 20px; /* Space between the logo and text */
+    }
+    
 
     /* Additional fixes to make the image and text container responsive */
     .leftPicture, .rightPicture {
