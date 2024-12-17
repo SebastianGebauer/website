@@ -1,12 +1,26 @@
 .left {
     grid-area: left;
     padding: 10px;
+    align-items: center;
 }
 
 .right {
     grid-area: right;
     padding: 10px;
+    
 }
+
+.left, .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:white;
+    padding: 40px;
+    margin: 0;
+    
+}
+
+
 
 .header {
 
@@ -27,9 +41,11 @@
 
 .hero-header-container {
     background-image: url('pictures/pexels-markusspiske-2004161.jpg');
+    position: relative;
     background-position: center;
     background-size: cover;
-    grid-template-areas: 'header header header header header'
+    grid-template-areas: 
+    'header header header header header'
     'hero hero hero hero hero';
     grid-area: hero-header;
     
@@ -50,7 +66,23 @@
     grid-area: hero;
     color: white;
     padding: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    border-radius: 10px; /* Optional: Adds rounded corners */;
 }
+
+
+
+.hero-header-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(14, 47, 94, 1) 100%);
+    pointer-events: none;
+}
+
 
 .footer {
     grid-area: footer;
@@ -63,6 +95,9 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
+ 
+
+    
 }
 
 img{
@@ -77,7 +112,8 @@ p{
 }
 
 .grid-container {
-    
+    background: rgb(14,47,94);
+    background: linear-gradient(180deg, rgba(14,47,94,1) 29%, rgba(38,209,84,0.18531162464985995) 69%);
     display: grid;
     grid-template-areas: 
     'hero-header hero-header hero-header hero-header hero-header'
@@ -92,6 +128,8 @@ body {
     margin: 0;
     width: 100%;
     max-width: 100%;
+    font-family:Arial, Helvetica, sans-serif
+
 }
 
 @media (max-width:1300px) {
@@ -109,12 +147,18 @@ body {
         font-size: 30px;
     
     } 
+
+    .left, .right, .leftPicture, .rightPicture {
+        padding: 20px; /* Reduce padding */
+    }
+    
+ 
    
 
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     .header {
         flex-direction: column; /* Stack the header elements */
         text-align: center; /* Center-align header content */
@@ -138,5 +182,9 @@ body {
             'left'
             'rightPicture'
             'footer';
+    }
+
+    .left, .right, .leftPicture, .rightPicture {
+        padding: 20px; /* Reduce padding */
     }
 }
