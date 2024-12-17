@@ -6,7 +6,7 @@ const translation = {
         slovak: "Slovak",
         welcome: "Welcome to my personal website!",
         welcomeText: "Here, you'll find insights into my career, skills and hobbies. <br>Explore my journey and discover what drives my passion for technology and innovation"
-        , introduction: "Introduction Section"
+        , introduction: "Introduction"
         , introductionText1: "Hello! My name is Sebastian Gebauer, a tech enthusiast with a love for solving complex problems. <br> This website serves as a showcase of my work, achievments and aspirations."
         , introductionText2: "I enjoy diving into software development projects that challenge my skills <br>and allow me to grow as an IT professional. Feel free to explore my portfolio and get to know me better!"
 
