@@ -100,6 +100,13 @@
     
 }
 
+.text-fields{
+    background-color: rgba(79, 79, 79, 0.5); 
+    padding: 40px; 
+    border-radius: 10px;
+    width: fit-content;
+}
+
 img{
     width : 100%;
     max-width: 800px;
