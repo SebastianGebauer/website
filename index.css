@@ -123,26 +123,57 @@ p{
 
 .grid-container {
     background: rgb(14,47,94);
-    background: linear-gradient(180deg, rgba(14,47,94,1) 29%, rgba(38,209,84,0.18531162464985995) 69%);
+    background: linear-gradient(180deg, rgba(14,47,94,1) 29%, #00ff87);
     display: grid;
     grid-template-areas: 
     'hero-header hero-header hero-header hero-header hero-header'
     'leftPicture leftPicture right right right'
     'left left left rightPicture rightPicture'
-    'jobsite1 jobsite1 jobsite1 jobsite1 jobsite1'
-    'footer footer footer footer footer'
     ;
-   
- 
-   
 }
 
+.job-container {
+    background: rgb(70,202,81);
+    background: linear-gradient(180deg, rgba(70,202,81,1) 22%, rgba(240,115,0,1) 80%);display: grid;
+    grid-area: jobs;
+    grid-template-columns: 1fr; /* Always one column */
+    grid-gap: 20px; /* Space between each job site */
+}
+
+.job-site {
+    display: flex;
+    border: 5px solid White;
+    flex-direction: row; /* Ensure the logo and text are side by side */
+    background-color: rgb(255, 136, 0);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.jobLogo {
+    width: 200px; /* Adjust size of the logo */
+    height: auto;
+    margin-right: 20px; /* Space between the logo and text */
+}
+
+.jobText {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+    
+}
 body {
+    font-size: 20px;
     margin: 0;
     width: 100%;
     max-width: 100%;
     font-family:Arial, Helvetica, sans-serif
 
+}
+
+body, html {
+    width: 100%;
 }
 
 body, .grid-container {
@@ -186,36 +217,27 @@ body, .grid-container {
 }
 
 @media (max-width: 590px) {
-    .header {
-        flex-direction: column; /* Stack the header elements */
-        text-align: center; /* Center-align header content */
-        padding: 10px;
-        font-size: 30px;
-    }
-
-    .header select {
-        text-align: center;
-        width: 30%; 
-        margin-top: 10px;
-        font-size: 30px;
-    } 
-
     .grid-container {
-        grid-template-columns: 1fr; /* Stack items vertically */
+        grid-template-columns: 1fr; /* One column for mobile */
         grid-template-areas: 
             'hero-header'
             'leftPicture'
             'right'
             'left'
             'rightPicture'
-            'footer';
-            background-size: 100% 100%; /* Ensure the background scales correctly */
-            background-repeat: no-repeat; /* Prevent the background from repeating */
-            background-position: center center; 
+            'footer'; /* Ensure each element stacks vertically */
     }
 
-    .left, .right, .leftPicture, .rightPicture {
-        padding: 10px; /* Reduce padding */
+    /* Additional fixes to make the image and text container responsive */
+    .leftPicture, .rightPicture {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box; /* Ensure padding does not overflow */
+    }
+
+    .left, .right {
+        padding: 10px;
+        box-sizing: border-box;
     }
 
 
