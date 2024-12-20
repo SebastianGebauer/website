@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.8, maximum-scale=1.5, user-scalable=yes">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=0.8, maximum-scale=1.5, user-scalable=yes">
     <title>Gebauer Sebastian website</title>
     <link rel="stylesheet" href="index.css">
     </link>
@@ -15,7 +16,10 @@
         <div class="hero-header-container">
             <div class="header">
                 <h1 class="headerName">Sebastian Gebauer</h1>
+
                 <div class="languageSection" style="display: flex; align-items: center; padding-right: 10px; ">
+
+
                     <img src="pictures/icons8-language-100.png" style="padding-right: 20px;">
 
                     <select id="language" name="language" style=" margin-bottom: 10px; width: auto; font-size: 30px;"
@@ -28,6 +32,16 @@
 
 
             </div>
+            <div class="nav">
+                <nav>
+                    <ul class="nav-list">
+
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experience">Job Experiences</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </nav>
+            </div>
             <div class="hero">
                 <h1 data-translate="welcome">Welcome to my personal website!</h1>
                 <h2 data-translate="welcomeText">Here, you'll find insights into my career, skills and hobbies. Explore
@@ -35,7 +49,8 @@
             </div>
         </div>
 
-        <div class="leftPicture"><img style="max-width: 300px; " src="pictures/Professional pic.jpg"></div>
+        <div class="leftPicture"><img style="max-width: 400px; border: 5px solid White; border-radius: 10px;"
+                src="pictures/Professional pic.jpg"></div>
         <div class="right">
             <div class="text-fields">
                 <h1 data-translate="introduction">Introduction Section</h1>
@@ -48,66 +63,127 @@
                     better!</p>
             </div>
         </div>
-        <div class="rightPicture"><img src="pictures/IMG_10122024002614.jpg" style="max-width: 400px; "></div>
+        <div class="rightPicture"><img src="pictures/IMG_10122024002614.jpg"
+                style="border-radius: 10px; border: 5px solid White;max-width: 500px; "></div>
         <div class="left">
             <div class="text-fields">
-                <h1>Skills Section</h1>
-                <p>My abilities and experiences in the work field </p>
-                <ul style="font-size: 20px;">
-                    <li><strong>Programming Languages</strong></li>
-                    <ul>
-                        <li>C++, C#</li>
-                        <li>Python</li>
-                        <li>Java</li>
-                    </ul>
-                    <li><strong>Databases</strong></li>
-                    <ul>
-                        <li>OracleDB</li>
-                        <li>Postgres</li>
-                        <li>MS-Database</li>
-                    </ul>
-                    <li><strong>Languages</strong></li>
-                    <ul>
-                        <li>English</li>
-                        <li>German</li>
-                        <li>Slovak</li>
-                    </ul>
-                </ul>
+                <h1 data-translate="skills" id="skills">Skills</h1>
+                <p data-translate="skillsText1">
+                    Proficient in web development using HTML, CSS, JavaScript/TypeScript, and frameworks like Angular
+                    and SpringBoot. <br>
+                    Experienced with backend technologies including MS-SQL, T-SQL, and NoSQL databases.
+                </p>
+                <p data-translate="skillsText2">
+                    Familiar with programming languages such as C++, Java, and Python, alongside version control tools
+                    like GitHub/GitLab. <br>
+                    Additional expertise in Linux Bash/Shell scripting, GIMP/Photoshop for design tasks, and Windows
+                    BIOS configurations.
+                </p>
+
             </div>
         </div>
-       
+        <h1 class="titleFont" id="experience">Job Experiences </h1>
     </div>
     <div class="job-container">
-        <div class="job-site" style="background-color: #46ca51">
-            <img src="pictures/siemens-logo.png" alt="Job Site Logo" class="jobLogo">
-            <div class="jobText">
-                <h3>Job Site Title</h3>
-                <p>Description or details of the job site. You can provide a short overview of your experience, tasks, or projects.</p>
+        <a href="https://www.siemens.com" target="_blank" class="job-link">
+            <div class="job-site" >
+                <img src="pictures/siemens-logo.png" alt="Job Site Logo" class="jobLogo">
+                <div class="jobText">
+                    <h3>Siemens ETM, Eisenstadt</h3>
+                    <p>Einblicke in den Arbeitsalltag eines internationalen Unternehmens gewonnen, durch Teilnahme an
+                        Führungen und Präsentationen, um verschiedene Abteilungen und Arbeitsbereiche zu verstehen.</p>
+                </div>
             </div>
-        </div>
-        <div class="job-site" style="background-color: #bebc00">
-            <img src="pictures/sealmaker-logo.jpg" alt="Job Site Logo" class="jobLogo">
-            <div class="jobText">
-                <h3>Job Site Title</h3>
-                <p>Description or details of the job site. You can provide a short overview of your experience, tasks, or projects.</p>
+        </a>
+        <a href="https://www.siemens.com" target="_blank" class="job-link">
+            <div class="job-site" >
+                <img src="pictures/sealmaker-logo.jpg" alt="Job Site Logo" class="jobLogo">
+                <div class="jobText">
+                    <h3>SealMaker, Pöttelsdorf</h3>
+                    <p>Entwicklung einer C++-App in Visual Studio zur automatischen Anpassung von X/Y-Werten im
+                        Maschinencode über eine benutzerfreundliche Oberfläche. Einrichtung eines neuen Subnetzes im
+                        Unternehmensnetzwerk und Integration von Backup-Ordnern auf externen Rechnern. Verwaltung von
+                        Benutzerkonten und Berechtigungen im Active Directory.</p>
+                </div>
             </div>
-        </div>
-        <div class="job-site" style="background-color: #ceab00">
-            <img src="pictures/ix-cad-logo.png" alt="Job Site Logo" class="jobLogo">
-            <div class="jobText">
-                <h3>Job Site Title</h3>
-                <p>Description or details of the job site. You can provide a short overview of your experience, tasks, or projects.</p>
+        </a>
+        <a href="https://www.siemens.com" target="_blank" class="job-link">
+            <div class="job-site" >
+                <img src="pictures/ix-cad-logo.png" alt="Job Site Logo" class="jobLogo">
+                <div class="jobText">
+                    <h3>imos IX-CAD, Cobrug</h3>
+                    <p>Automatisierung der Excel-Datenübertragung in Partner-Datenbanken und Erstellung
+                        benutzerfreundlicher
+                        Anleitungen für TeamViewer und MS SQL SMS. Unterstützung bei der Nutzung von iX CAD für
+                        3D-Visualisierungen und Möbelbearbeitung.</p>
+                </div>
             </div>
-        </div>
-        <div class="job-site" style="background-color: #f07300">
-            <img src="pictures/asfinag-logo.png" alt="Job Site Logo" class="jobLogo">
-            <div class="jobText">
-                <h3>Job Site Title</h3>
-                <p>Description or details of the job site. You can provide a short overview of your experience, tasks, or projects.</p>
+        </a>
+        <a href="https://www.siemens.com" target="_blank" class="job-link">
+            <div class="job-site" >
+                <img src="pictures/asfinag-logo.png" alt="Job Site Logo" class="jobLogo">
+                <div class="jobText">
+                    <h3>Asfinag, Schnirgasse - Wien</h3>
+                    <p>Erstellung einer Azure DevOps Wiki-Struktur und Übertragung von Projektdokumentationen aus dem
+                        alten
+                        SharePoint Wiki mit Markdown. Entwicklung einer Hilfeseite für Mautstellen-Mitarbeiter und
+                        Einrichtung einer Pipeline zur Umwandlung von Markdown in HTML.</p>
+                </div>
             </div>
-        </div>
+            </a>
     </div>
- 
+    <div class="grid-container2">
+        <div class="leftPicture"></div>
+        <div class="right">
+            <div class="text-fields">
+                <h1 data-translate="introduction">Introduction Section</h1>
+                <p data-translate="introductionText1">Hello! My name is Sebastian Gebauer, a tech enthusiast with a love
+                    for solving complex problems. <br>
+                    This website serves as a showcase of my work, achievments and aspirations.</p>
+                <p data-translate="introductionText2">I enjoy diving into software development projects that challenge
+                    my skills <br>
+                    and allow me to grow as an IT professional. Feel free to explore my portfolio and get to know me
+                    better!</p>
+            </div>
+        </div>
+
+        <h1 class="titleFont" id="projects">Projects </h1>
+    </div>
+
+    <div class="grid-container2">
+        <div class="leftPicture"></div>
+        <div class="right">
+            <div class="text-fields">
+                <h1 data-translate="introduction">Introduction Section</h1>
+                <p data-translate="introductionText1">Hello! My name is Sebastian Gebauer, a tech enthusiast with a love
+                    for solving complex problems. <br>
+                    This website serves as a showcase of my work, achievments and aspirations.</p>
+                <p data-translate="introductionText2">I enjoy diving into software development projects that challenge
+                    my skills <br>
+                    and allow me to grow as an IT professional. Feel free to explore my portfolio and get to know me
+                    better!</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="grid-container2">
+        <div class="leftPicture"></div>
+        <div class="right">
+            <div class="text-fields">
+                <h1 data-translate="introduction">Introduction Section</h1>
+                <p data-translate="introductionText1">Hello! My name is Sebastian Gebauer, a tech enthusiast with a love
+                    for solving complex problems. <br>
+                    This website serves as a showcase of my work, achievments and aspirations.</p>
+                <p data-translate="introductionText2">I enjoy diving into software development projects that challenge
+                    my skills <br>
+                    and allow me to grow as an IT professional. Feel free to explore my portfolio and get to know me
+                    better!</p>
+            </div>
+        </div>
+
+       
+    </div>
+
 </body>
 
 </html>
