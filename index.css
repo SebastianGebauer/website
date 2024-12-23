@@ -210,7 +210,7 @@ p{
 }
 
 .job-link:hover .job-site {
-    transform: scale(1.05); /* Slightly increases the size */
+    transform: scale(1.025); /* Slightly increases the size */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #00527036;
